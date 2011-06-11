@@ -1,3 +1,5 @@
+This is a fork of the original msDropDown, available from http://www.marghoobsuleman.com/jquery-image-dropdown
+
 You may use msDropDown under the terms of either the MIT License or 
 the Gnu General Public License (GPL) Version 2.
 
