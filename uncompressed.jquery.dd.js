@@ -1,9 +1,9 @@
 // MSDropDown - jquery.dd.js
-// author: Marghoob Suleman - Search me on google
-// Date: 12th Aug, 2009
-// Version: 2.36 {date: 18 Dec, 2010}
-// Revision: 31
-// web: www.giftlelo.com | www.marghoobsuleman.com
+// author: Brian Dukes, originally written by Marghoob Suleman
+// Date: 11th Jun, 2011
+// Version: 2.37
+// Revision: 32
+// web: github.com/bdukes/msDropDown | www.giftlelo.com | www.marghoobsuleman.com
 /*
 // msDropDown is free jQuery Plugin: you can redistribute it and/or modify
 // it under the terms of the either the MIT License or the Gnu General Public License (GPL) Version 2
@@ -84,7 +84,7 @@
 		 clsName = ' '+options.useSprite+' '+currentOptOption.className;
 		} else {
 		 arrow = $(currentOptOption).attr("title");
-		 arrow = (arrow.length==0) ? "" : '<img src="'+arrow+'" align="absmiddle" /> ';																 
+		 arrow = (!arrow) ? "" : '<img src="'+arrow+'" align="absmiddle" /> ';																 
 		};
 		//console.debug("clsName "+clsName);
 		var sText = $(currentOptOption).text();
@@ -156,7 +156,7 @@
 			arrow = $("#"+elementid+" option:selected").attr("title");
 		};
 		//console.debug("sObj	 "+sObj.length);
-		arrow = (arrow.length==0 || arrow==undefined || options.showIcon==false || options.useSprite!=false) ? "" : '<img src="'+arrow+'" align="absmiddle" /> ';
+		arrow = (arrow==undefined || arrow.length==0 || options.showIcon==false || options.useSprite!=false) ? "" : '<img src="'+arrow+'" align="absmiddle" /> ';
 		var sDiv = '<div id="'+titleid+'" class="'+styles.ddTitle+'"';
 		sDiv += '>';
 		sDiv += '<span id="'+arrowid+'" class="'+styles.arrow+'"></span><span class="'+styles.ddTitleText+'" id="'+titletextid+'">'+arrow + '<span class="'+styles.ddTitleText+'">'+sText+'</span></span></div>';
